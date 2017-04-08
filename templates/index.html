@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Simple Mail Service</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="/static/js/libs/angular.min.js"></script>
+    <script src="/static/js/app.js"></script>
+
+	<link rel="stylesheet" href="../static/css/main.css" />
+	<script>
+        window.addEventListener("load", function() {
+            var inputName = document.getElementById('theName');
+            var inputMail = document.getElementById('theEmail');
+            var inputSubject = document.getElementById('theSubject');
+            var inputMessage = document.getElementById('theMessage');
+            var form = document.getElementById('mailForm');
+            var elem = document.createElement('div');
+            elem.id = 'notify';
+            elem.style.display = 'none';
+            form.appendChild(elem);
+            inputName.addEventListener("keyup", function(event) {
+                var name = event.target.value;
+                var badChars = [/0/gi, /1/gi, /2/gi, /3/gi, /4/gi, /5/gi, /6/gi, /7/gi, /8/gi, /9/gi, /~/gi, /!/gi, /@/gi, /#/gi, /\$/gi, /%/gi, /\^/gi, /&/gi, /\*/gi, /\(/gi, /\)/gi, /-/gi, /_/gi, /\+/gi, /=/gi, /\//gi, /\[/gi, /\]/gi, /\\/gi, /\|/gi, /;/gi, /:/gi, /'/gi, /"/gi, /</gi, />/gi, /\?/gi, /{/gi, /}/gi];
+                for (var i in badChars) {
+                    inputName.value = inputName.value.replace(badChars[i], "");
+                }
+                if (name.length >= 3) {
+                    nameLable.innerHTML = "Name <span class='validate'>&#x2714;</span>";
+                    if ('block' === elem.style.display) {
+                        inputName.className = '';
+                        elem.style.display = 'none';
+                    }
+                } else {
+                    nameLable.innerHTML = "Name <span class='validate'>&#x2717;</span>";
+                    elem.textContent = 'Name should contain minimun 3 letters.';
+                    elem.className = 'error';
+                    elem.style.display = 'block';
+                }
+            }, false);
+            inputMail.addEventListener('keyup', function(event) {
+                var email = event.target.value;
+                if (inputName.value.length < 3) {
+                    nameLable.innerHTML = "Name <span class='validate'>&#x2717;</span>";
+                    emailLable.innerHTML = "Email <span class='validate'>&#x2717;</span>";
+                    if (inputName.value.length == 0) {
+                        elem.textContent = 'Oops! Please enter your name first.';
+                    } else {
+                        elem.textContent = 'Oops!, It seems, your name is wrong; Please check.';
+                    }
+                    elem.className = 'error';
+                    elem.style.display = 'block';
+                } else if (email.indexOf("@") != -1 && email.indexOf(".") != -1 && email.lastIndexOf("@") < email.lastIndexOf(".") && email.lastIndexOf(".") < email.length && email.lastIndexOf(".") - email.lastIndexOf("@") > 2) {
+                    emailLable.innerHTML = "Email <span class='validate'>&#x2714;</span>";
+                    inputSubject.disabled = false;
+                    inputMessage.disabled = false;
+                    if ('block' === elem.style.display) {
+                        inputName.className = '';
+                        elem.style.display = 'none';
+                    }
+                } else {
+                    emailLable.innerHTML = "Email <span class='validate'>&#x2717;</span>";
+                    elem.textContent = 'Enter valid mail ID! Eg. sample@mail.com';
+                    elem.className = 'error';
+                    elem.style.display = 'block';
+                }
+            }, false);
+            inputSubject.addEventListener("keyup", function(event) {
+                var subject = event.target.value;
+                if (subject.length >= 1) {
+                    subjectLable.innerHTML = "Subject <span class='validate'>&#x2714;</span>";
+                } else {
+                    subjectLable.innerHTML = "Subject <span class='validate'>&#x2717;</span>";
+                }
+            }, false);
+            inputMessage.addEventListener("keyup", function(event) {
+                var message = event.target.value;
+                if (message.length >= 1) {
+                    messageLable.innerHTML = "Message <span class='validate'>&#x2714;</span>";
+                } else {
+                    messageLable.innerHTML = "Message <span class='validate'>&#x2717;</span>";
+                }
+            }, false);
+            form.addEventListener("reset", function(event) {
+                nameLable.innerHTML = "Name";
+                emailLable.innerHTML = "Email";
+                subjectLable.innerHTML = "Subject";
+                messageLable.innerHTML = "Message";
+                if ('block' === elem.style.display) {
+                    inputName.className = '';
+                    elem.style.display = 'none';
+                }
+            }, false);
+        }, false)
+    </script>
+</head>
+
+<body ng-app="mailservice">
+    <div ng-controller="HomeCtrl">
+        <section id="header">
+            <div class="inner">
+                <span class="icon major material-icons">email</span>
+                <h1>Hi, why can't you just tell us what you feel.</h1>
+                <form id="mailForm">
+                    <div class="container">
+                        <div class="group">
+                            <input ng-model="content.name" name="name" id="theName" type="text" required>
+                            <span class="bar"></span>
+                            <label for="name" id="nameLable">Name </label>
+                        </div>
+                        <div class="group">
+                            <input ng-model="content.to_email" id="theEmail" type="text" required>
+                            <span class="bar"></span>
+                            <label id="emailLable">Email</label>
+                        </div>
+                        <div class="group">
+                            <input ng-model="content.subject" id="theSubject" type="text" required disabled>
+                            <span class="bar"></span>
+                            <label id="subjectLable">Subject</label>
+                        </div>
+                        <div class="group">
+                            <textarea ng-model="content.message" id="theMessage" type="text" rows="4" required disabled></textarea>
+                            <span class="bar"></span>
+                            <label id="messageLable">Message</label>
+                        </div>
+                    </div>
+                    <button id="theSend" ng-click="sendMessage()" class="button" type="reset">SUBMIT</button>
+                    <button id="theReset" class="button" type="reset">RESET</button>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

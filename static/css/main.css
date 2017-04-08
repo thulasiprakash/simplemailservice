@@ -1,0 +1,314 @@
+html,
+body,
+div,
+span,
+h1 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+body,
+input,
+select,
+textarea {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 16pt;
+    font-weight: 100;
+    line-height: 1.65em;
+}
+p {
+    margin: 0 0 2em 0;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.35em;
+}
+.container {
+    width: 380px;
+    margin: 30px auto 0;
+    display: block;
+    border-radius: 25px;
+}
+.group {
+    position: relative;
+    margin-bottom: 20px;
+}
+button {
+    display: inline-block;
+    position: relative;
+    width: 120px;
+    height: 32px;
+    margin: 30px auto 0;
+    line-height: 32px;
+    border-radius: 4px;
+    border: none;
+    font-size: 0.9em;
+    background-color: transparent;
+}
+.center {
+    text-align: center;
+}
+label {
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+input,
+textarea {
+    font-size: 18px;
+    background-color: transparent;
+    padding: 10px 10px 10px 10px;
+    display: block;
+    width: 360px;
+    border: none;
+    color: #ffffff;
+    border-bottom: 1px solid #FFFFFF;
+}
+input:focus,
+textarea:focus {
+    outline: none;
+}
+input:focus ~ label,
+input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+#notify {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 12px;
+    width: 100%;
+    color: #fff;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#notify:hover {
+    font-size: 14px;
+    width: 100%;
+}
+#notify.error {
+    color: #ffffff !important;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.10);
+}
+form {
+    max-width: 360px;
+    margin: auto;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 0px;
+}
+.bar {
+    position: relative;
+    display: block;
+    width: 380px;
+}
+.bar:before,
+.bar:after {
+    content: '';
+    height: 1px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #FFFFFF;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+.bar:before {
+    left: 50%;
+}
+.bar:after {
+    right: 50%;
+}
+input:focus ~ .bar:before,
+input:focus ~ .bar:after,
+textarea:focus ~ .bar:before,
+textarea:focus ~ .bar:after {
+    width: 50%;
+}
+.icon {
+    text-decoration: none;
+    border-bottom: none;
+    position: relative;
+}
+.icon.major {
+    text-decoration: none;
+    color: #555;
+    cursor: default;
+    display: inline-block;
+}
+#header {
+    padding: 9em 0 9em 0;
+    color: rgba(255, 255, 255, 0.75);
+    background-attachment: fixed;
+    background-image: linear-gradient(0deg, #353846 15%, #293241 25%, #141C2F, #0D1225);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+#header h1 {
+    color: #ffffff;
+}
+#header header.major:after {
+    background: #ffffff;
+}
+#header input[type="submit"],
+#header input[type="reset"],
+#header input[type="button"],
+#header button,
+#header .button {
+    box-shadow: inset 0 0 0 1px #ffffff;
+    color: #ffffff !important;
+}
+#header input[type="submit"]:hover,
+#header input[type="reset"]:hover,
+#header input[type="button"]:hover,
+#header button:hover,
+#header .button:hover {
+    background-color: rgba(255, 255, 255, 0.125);
+}
+#header input[type="submit"]:active,
+#header input[type="reset"]:active,
+#header input[type="button"]:active,
+#header button:active,
+#header .button:active {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+#header .icon.major {
+    color: #ffffff;
+    font-size: 4em;
+}
+#header h1 {
+    margin: 0;
+}
+#header span {
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* XLarge */
+
+@media screen and (max-width: 1680px) {
+    body,
+    input,
+    textarea {
+        font-size: 14pt;
+    }
+    #header {
+        padding: 6em 0 6em 0;
+    }
+}
+/* Large */
+
+@media screen and (max-width: 1140px) {
+    body,
+    input,
+    textarea {
+        font-size: 13pt;
+    }
+    h1 br {
+        display: none;
+    }
+    #header {
+        padding: 5em 0 5em 0;
+        background-attachment: scroll;
+    }
+}
+/* Medium */
+
+@media screen and (max-width: 980px) {
+    #header {
+        padding: 8em 3em 8em 3em;
+    }
+}
+/* Small */
+
+@media screen and (max-width: 736px) {
+    body,
+    input,
+    textarea {
+        font-size: 12pt;
+    }
+    h1 {
+        font-size: 1.75em;
+    }
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"],
+    button,
+    .button {
+        height: 3em;
+        line-height: 3em;
+    }
+    #header {
+        padding: 4em 3em 4em 3em;
+    }
+}
+/* XSmall */
+
+@media screen and (max-width: 480px) {
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"],
+    .button {
+        padding: 0;
+    }
+    #header {
+        padding: 4em 2em 4em 2em;
+    }
+    #header br {
+        display: none;
+    }
+}
+/* XXSmall */
+
+@media screen and (max-width: 320px) {
+    html,
+    body {
+        min-width: 320px;
+    }
+    #header {
+        padding: 3em 1em 3em 1em;
+    }
+}
+/* fallback */
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v21/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
