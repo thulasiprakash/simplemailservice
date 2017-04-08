@@ -38,6 +38,3 @@ Please follow the below instructions to setup Simple Mail Service Application
 
    ## Run application
    `python app.py`
-
-## Why?
-### Flaskweb
