@@ -1,10 +1,10 @@
 # Simple Mail Service
 Please follow the below instructions to setup Simple Mail Service Application
 ## Setup 
-
-1. Install Flask 
    
    ### For Linux/Mac OS 
+   
+   1. Install Flask 
    
    ```   
    $ sudo pip install virtualenv
@@ -29,13 +29,16 @@ Please follow the below instructions to setup Simple Mail Service Application
    ```
    $ sudo pip install Flask
    ```
-   ### For Windows http://flask.pocoo.org/docs/0.12/installation/#windows-easy-install
-   
-2. Install Send Grid
+   2. Install Send Grid
    ```
    pip install sendgrid
    ```
-## Run application
+
+   
+### For Windows http://flask.pocoo.org/docs/0.12/installation/#windows-easy-install
+   
+
+   ## Run application
    `python app.py`
 
 ## Why?
