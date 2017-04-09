@@ -1,6 +1,13 @@
 # Simple Mail Service
 Please follow the below instructions to setup Simple Mail Service Application
 
+## Why?
+   ### Angular
+   1. Better Plug & Play Components
+   2. Faster application development
+   3. Allows Parallel Development
+   4. Handles Dependencies
+
 ## Setup 
    
    ### For Linux/Mac OS 
