@@ -4,7 +4,7 @@ var myApp = angular.module('mailservice', []);
 myApp.controller('HomeCtrl', function($scope, $http) {
     $scope.content = {
         from_email: 'no-reply@test.com',
-        api_key: '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'
+        api_key: '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'
     };
 
     $scope.sendMessage = function() {
