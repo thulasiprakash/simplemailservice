@@ -49,7 +49,8 @@ Please follow the below instructions to setup Simple Mail Service Application
       ```
       pip install sendgrid
       ```
-** For Windows ** http://flask.pocoo.org/docs/0.12/installation/#windows-easy-install
+**For Windows** http://flask.pocoo.org/docs/0.12/installation/#windows-easy-install
 ## Run application
    `python app.py`
-To see a demo deployed on heroku visit : https://peaceful-castle-40736.herokuapp.com/
+
+To see a **demo deployed on heroku** visit : https://peaceful-castle-40736.herokuapp.com/
