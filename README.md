@@ -6,15 +6,20 @@ Please follow the below instructions to setup Simple Mail Service Application
    - Better Plug & Play Components
    - Faster application development
    - Allows Parallel Development
-   - Handles Dependencies
+   - Handless Dependencies
    ### Flaskweb
-   - built-in development server and debugger
+   - Built-in development server and debugger
    - Restful request dispatching
    - Integrated unit testing
+   ### Send Grid
+   - Low cost
+   - Easy to integrate
+   - Great documentation
+   ### Heroku
    
 ## Setup 
    
-   ### For Linux/Mac OS 
+   > For Linux/Mac OS 
    
    1. Install Flask 
    
@@ -45,7 +50,7 @@ Please follow the below instructions to setup Simple Mail Service Application
       ```
       pip install sendgrid
       ```
-  ### For Windows http://flask.pocoo.org/docs/0.12/installation/#windows-easy-install
+  > For Windows http://flask.pocoo.org/docs/0.12/installation/#windows-easy-install
 ## Run application
 
-python app.py
+   'python app.py'
