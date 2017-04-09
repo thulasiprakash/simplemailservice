@@ -26,9 +26,9 @@ def send_simple_messageend():
         sg = sendgrid.SendGridAPIClient(api_key=api_key)
         mail = Mail(from_email, subject, to_email, message)
         response = sg.client.mail.send.post(request_body=mail.get())
-        print response.status_code
-        print response.body
-        print response.headers
+        print(response.status_code)
+        print(response.body)
+        print(response.headers)
         return jsonify(status='SUCCESS')
     except:
         print('Message not sent')
