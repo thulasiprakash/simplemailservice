@@ -30,9 +30,8 @@ def send_simple_messageend():
         print response.body
         print response.headers
         return jsonify(status='SUCCESS')
-    except Exception, e:
-
-        return jsonify(status='ERROR', message=str(e))
+    except:
+        return jsonify(status='ERROR')
 
 
 if __name__ == '__main__':
