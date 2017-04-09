@@ -31,8 +31,7 @@ def send_simple_messageend():
         print response.headers
         return jsonify(status='SUCCESS')
     except:
-        return jsonify(status='ERROR')
-
+        print('Message not sent')
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
