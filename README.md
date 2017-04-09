@@ -3,11 +3,15 @@ Please follow the below instructions to setup Simple Mail Service Application
 
 ## Why?
    ### Angular
-   1. Better Plug & Play Components
-   2. Faster application development
-   3. Allows Parallel Development
-   4. Handles Dependencies
-
+   - Better Plug & Play Components
+   - Faster application development
+   - Allows Parallel Development
+   - Handles Dependencies
+   ### Flaskweb
+   - built-in development server and debugger
+   - Restful request dispatching
+   - Integrated unit testing
+   
 ## Setup 
    
    ### For Linux/Mac OS 
