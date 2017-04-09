@@ -1,5 +1,6 @@
 # Simple Mail Service
 Please follow the below instructions to setup Simple Mail Service Application
+
 ## Setup 
    
    ### For Linux/Mac OS 
@@ -34,7 +35,6 @@ Please follow the below instructions to setup Simple Mail Service Application
       pip install sendgrid
       ```
   ### For Windows http://flask.pocoo.org/docs/0.12/installation/#windows-easy-install
-   
+## Run application
 
-   ## Run application
-   `python app.py`
+python app.py
