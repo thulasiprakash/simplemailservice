@@ -29,5 +29,5 @@ def send_simple_messageend():
     except Exception, e:
         return jsonify(status='ERROR', message=str(e))
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+if __name__ == '__main__':
+    app.run(debug=True, use_reloader=True)
