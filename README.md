@@ -16,13 +16,12 @@ Please follow the below instructions to setup Simple Mail Service Application
    - Easy to integrate
    - Great documentation
    ### Heroku
-   
+   - Very easy to integrate add-ons like Send Grid, PostGresSql, etc.
+   - Easy to get started, only need to install heroku toolkit.
+   - Simple deployment procedure. 
 ## Setup 
-   
-   > For Linux/Mac OS 
-   
+### For Linux/Mac OS 
    1. Install Flask 
-   
       ```   
       $ sudo pip install virtualenv
       ```
@@ -50,7 +49,6 @@ Please follow the below instructions to setup Simple Mail Service Application
       ```
       pip install sendgrid
       ```
-  > For Windows http://flask.pocoo.org/docs/0.12/installation/#windows-easy-install
+###For Windows http://flask.pocoo.org/docs/0.12/installation/#windows-easy-install
 ## Run application
-
-   'python app.py'
+   `python app.py`
